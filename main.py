@@ -7,11 +7,6 @@ try:
     response = requests.get('https://api.npoint.io/674f5423f73deab1e9a7')
     response.raise_for_status()  # Raise an error for bad status codes
     data = response.json()
-    for post in data:
-        print(post['title'])
-        print(post['body'])
-        print(post['image_url'])
-        print('\n')
 except requests.exceptions.RequestException as e:
     print(f"An error occurred: {e}")
 
